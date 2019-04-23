@@ -5,10 +5,10 @@ const PORT = process.env.PORT || 4200;
 
 const app = express();
 
-app.use(express.static(path.join( __dirname , '/dist/Test-App'  )));
+app.use(express.static(path.join( __dirname , '/dist/Voting-App'  )));
 
 app.get( '/*' , (req,res) => {
-    res.sendfile( path.join( __dirname + "/dist/Test-App/index.html" ) )
+    res.sendfile( path.join( __dirname + "/dist/Voting-App/index.html" ) )
 } );
 
 app.set( 'port' , PORT );
