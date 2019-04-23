@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="login-form">
+    <div class="form-field">
+      <label id="example-radio-group-label">Pick your favorite team</label>
+    </div>
+    <div class="form-field">
+        <mat-radio-group
+        aria-labelledby="example-radio-group-label"
+        class="example-radio-group"
+        [(ngModel)]="bestTeam">
+        <mat-radio-button class="example-radio-button" *ngFor="let team of teams" [value]="team">
+          {{team}}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="form-field">
+        <div>Your vote: {{bestTeam}}</div>
+    </div>
+    <div class="form-field">
+      <button (click)="castService()">Submit</button>
+    </div>
+  </div>
+</div>
