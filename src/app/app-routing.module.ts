@@ -5,6 +5,7 @@ import { ResultsComponent } from './results/results.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
 
 const routes: Routes = [
+  { path : ''  , pathMatch : 'full' , redirectTo : "/voting" },
   { path : "voting" , component : VotingComponent },
   { path : "results" , component : ResultsComponent },
   { path : "thank-you" , component : ThankYouComponent }
